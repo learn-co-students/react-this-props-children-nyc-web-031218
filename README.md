@@ -8,7 +8,7 @@ We'll cover what  `this.props.children` means in the context of a React componen
 
 1. Use `this.props.children` to render content in our component
 2. Explain how to use the `React.Children` utilities
-3. Use and iterate over child components
+3. Use and iterate oversd child components
 
 ## Children in a component
 ![Sideshow Bob](https://media.giphy.com/media/xT5LMVEIvpgJCWCcog/giphy.gif)
