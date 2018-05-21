@@ -1,8 +1,9 @@
 # React this.props.children
 
+
 ## Overview
 
-We'll cover what  `this.props.children` means in the context of a React component. 
+We'll cover what  `this.props.children` means in the context of a React component.
 
 ## Objectives
 
@@ -55,8 +56,8 @@ export default class Panel extends React.Component {
 If something like `this.props.children` didn't exist, we'd have to pass in all of our content through a prop, which would be very unwieldy and look really ugly:
 
 ```js
-<Panel 
-  title="Browse for movies" 
+<Panel
+  title="Browse for movies"
   body={
     <div>
       <div>Movie stuff...</div>
@@ -64,7 +65,7 @@ If something like `this.props.children` didn't exist, we'd have to pass in all o
       <div>Movie stuff...</div>
       <div>Movie stuff...</div>
     </div>
-  } 
+  }
 />
 ```
 
@@ -90,7 +91,7 @@ Now, let's assume for some reason that we need to pass down an extra prop to our
 export default class MovieBrowser extends React.Component {
   render() {
     const currentPlayingTitle = 'Mad Max: Fury Road';
-    
+
     return (
       <div className="movie-browser">
         {this.props.children}
@@ -111,7 +112,7 @@ export default class MovieBrowser extends React.Component {
         isPlaying: child.props.title === currentPlayingTitle
       });
     });
-    
+
     return (
       <div className="movie-browser">
         {childrenWithExtraProp}
@@ -131,10 +132,10 @@ export default class SomeComponent extends React.Component {
   render() {
     const childrenWithWrapperDiv = React.Children.map(this.props.children, child => {
       return (
-        <div className="some-component-special-class">{child}</div> 
+        <div className="some-component-special-class">{child}</div>
       );
     });
-    
+
     return (
       <div className="some-component">
         <p>This component has {React.Children.count(this.props.children)} children.</p>
